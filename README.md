@@ -45,6 +45,7 @@ Fork: https://github.com/starikam/example-teamcity
 [Step 1/2] [INFO] BUILD SUCCESS
 [Step 2/2] Build step test (not master) (Maven) is skipped because of unfulfilled condition: "teamcity.build.branch does not equal master"
 ```
+Тут забыл скрины..
 
 8. Build configuration перенесена в репозиторий (Versioned Settings, формат Kotlin) -
 каталог [.teamcity](.teamcity), коммит `a894aa6` сделал TeamCity.
@@ -61,6 +62,7 @@ Triggered by 'Git'
 [Step 2/2] [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 [Step 2/2] [INFO] BUILD SUCCESS
 ```
+Тут забыл скрины..
 
 14. `feature/add_reply` влита в `master` через merge `335eedc`.
 
