@@ -27,11 +27,9 @@ Fork: https://github.com/starikam/example-teamcity
 
 1–3. Проект создан из fork, первая сборка упала из-за недоступного Maven Central:
 
-```
-[Step 1/1] Using predefined Maven user settings: settings.xml
-[Step 1/1] [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
-[Step 1/1] [INFO] BUILD SUCCESS
-```
+![Ошибка](https://github.com/starikam/example-teamcity/blob/master/screen/2026-09-28_10-01-50.png)
+
+![Получилось](https://github.com/starikam/example-teamcity/blob/master/screen/2026-09-28_10-33-37.png)
 
 4. Два шага Maven с условиями по `teamcity.build.branch`:
 `clean deploy`, если ветка `master`, иначе `clean test`.
@@ -70,6 +68,8 @@ Triggered by 'Git'
 
 16–17. В конфигурацию добавлено `artifactRules = "target/*.jar => target"`, повторная сборка `master`
 прошла, в артефактах `target/plaindoll-0.0.3.jar` и `target/original-plaindoll-0.0.3.jar`.
+
+![Артефакты](https://github.com/starikam/example-teamcity/blob/master/screen/2026-09-28_13-43-37.png)
 
 18. Изменение Artifact paths TeamCity сам закоммитил в репозиторий (`3ce43a4`), статус Versioned Settings:
 *successfully committed*. В [.teamcity/settings.kts](.teamcity/settings.kts) - оба шага с условиями,
