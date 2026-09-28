@@ -1,0 +1,13 @@
+---
+all:
+  hosts:
+    nexus-01:
+      ansible_host: ${host}
+      ansible_python_interpreter: /usr/bin/python3.11
+  children:
+    nexus:
+      hosts:
+        nexus-01:
+  vars:
+    ansible_connection_type: paramiko
+    ansible_user: ${user}

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  teamcity-agent:
+    image: ${image}
+    restart: always
+    environment:
+      SERVER_URL: "${server_url}"
+      AGENT_NAME: "agent-01"
+    volumes:
+      - agent-conf:/data/teamcity_agent/conf
+volumes:
+  agent-conf:
